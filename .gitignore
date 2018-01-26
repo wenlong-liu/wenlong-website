@@ -34,3 +34,4 @@ vignettes/*.pdf
 
 # Build website.
 public
+.Rproj.user
