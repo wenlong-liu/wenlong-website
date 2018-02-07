@@ -10,7 +10,7 @@ title = "Wenlong Liu's website"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2018"
+copyright = "&copy; 2018 Wenlong Liu"
 
 theme = "hugo-academic"
 enableEmoji = true
@@ -23,7 +23,7 @@ paginate = 10
 disqusShortname = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-102223458-1"
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
