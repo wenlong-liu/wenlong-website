@@ -256,27 +256,27 @@ defaultContentLanguageInSubdir = false
 [[menu.main]]
   name = "Presentations"
   url = "#talks"
-  weight = 3 
+  weight = 4 
   
 [[menu.main]]
-  name = "Posts"
+  name = "Blogs"
   url = "#posts"
-  weight = 4
+  weight = 5
 
 [[menu.main]]
   name = "Projects"
   url = "#projects"
-  weight = 5
+  weight = 3
 
-#[[menu.main]]
- # name = "Teaching"
-#  url = "#teaching"
-#  weight = 7
+[[menu.main]]
+  name = "Photos"
+  url = "gallery"
+  weight = 6
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 6
+  weight = 7
 
 # Taxonomies.
 [taxonomies]
