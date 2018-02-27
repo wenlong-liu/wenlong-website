@@ -6,12 +6,73 @@
     <description>Recent content in Wenlong Liu&#39;s website on Wenlong Liu&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2018 Wenlong Liu</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Brand new personal website of Wenlong Liu powered by Hugo-academic and Blogdown</title>
+      <title>Brief introduction of storm hysteresis effects in solute concentration-stream discharge (C-Q) relationship</title>
+      <link>/post/brief-introduction-of-storm-hysteresis-in-solute-concentration-stream-discharge-c-q-relationship/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/brief-introduction-of-storm-hysteresis-in-solute-concentration-stream-discharge-c-q-relationship/</guid>
+      <description>&lt;div id=&#34;what-are-storm-hysteresis-effects&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What are storm hysteresis effects?&lt;/h2&gt;
+&lt;p&gt;Generally, in order to investigate the dynamics of stream discharge and solute concentrations (C-Q relationship) in a watershed, researchers and environmental engineers usually set up monitoring stations in the watershed outlet. As the temporal dynamics of discharge and solute concentration is an integration of complex hydrological and biochemical processes, the relationship between solute concentration and discharge, hereafter called C-Q relationship, is mostly non-linear. If we plot the concentration against discharge within one storm event in a plot, we are supposed to see a non-linear loop, instead of a linear regression curve. The tweet below demonstrated the hysteresis effects in one event happened in 1991.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Bored of seeing time-series data?  Maybe there is another way of visualizing your discharge and nutrient concentration measurements in streams. &lt;a href=&#34;https://t.co/PSIEWpJp8E&#34;&gt;pic.twitter.com/PSIEWpJp8E&lt;/a&gt;&lt;/p&gt;&amp;mdash; Wenlong Liu (@tianya0423) &lt;a href=&#34;https://twitter.com/tianya0423/status/929969875707138048?ref_src=twsrc%5Etfw&#34;&gt;November 13, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;how-to-describe-a-hysteresis-loop&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;How to describe a hysteresis loop?&lt;/h2&gt;
+&lt;p&gt;As the shapes of hysteresis loops vary because of the different hydrogeochemical processes, it is important to describe a hysteresis loop to compare across spatial and temporal scales. For a fictitious hysteresis loop in Fig. 1a，adapted from &lt;span class=&#34;citation&#34;&gt;Long et al. (&lt;a href=&#34;#ref-long2017patterns&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt;, there are three variables to characterize a loop:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Direction: the direction of loops based on time or any x-axis variable, e.g. clockwise and anti-clockwise;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Amplitude: the strength of hysteresis effects;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Slope: to indicate the dilution/leaching of solute during an event compared with the base flow.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/blog_imgs/cq_plot.jpg&#34; alt=&#34;Fig. 1 Depiction of hysteresis loops&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Fig. 1 Depiction of hysteresis loops&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;why-are-we-interested-in-hysteresis-effects&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Why are we interested in hysteresis effects?&lt;/h2&gt;
+&lt;p&gt;Due to the complexity of hydrogeochemical processes in the watershed, the watershed is mostly a &lt;em&gt;black box&lt;/em&gt; for us. It is impossible to identify the exact sources and reactions contributing to the nutrient export. Luckily, we can employ hysteresis effects as a proxy to internal reactions in watersheds.&lt;/p&gt;
+&lt;p&gt;For example, &lt;span class=&#34;citation&#34;&gt;Blaen et al. (&lt;a href=&#34;#ref-blaen2017high&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt; monitored high-frequency stream discharge and nutrients data in a headwater catchment for 8 months and delineated 29 storm events representing 31% of observation period. Based on the analysis of storm hysteresis patterns, &lt;span class=&#34;citation&#34;&gt;Blaen et al. (&lt;a href=&#34;#ref-blaen2017high&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt; identified the key drivers and processes of nutrient export, showing in Fig. 2. Further details are available from an open-source publication &lt;a href=&#34;http://onlinelibrary.wiley.com/doi/10.1002/2017JG003904/full&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/blog_imgs/conceptual_hysteresis.png&#34; alt=&#34;Fig. 2 Conceptual model highlighting the spatial distribution of NO3-N and DOC across the catchment and key processes that control stream nutrient export under different hydroclimatological conditions.&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Fig. 2 Conceptual model highlighting the spatial distribution of NO3-N and DOC across the catchment and key processes that control stream nutrient export under different hydroclimatological conditions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;With the help of rapidly developing in-situ measuring techniques, we are going to gain more access to intensive measurements from different research interests. Therefore, the analysis of C-Q relationship with high-frequency dataset becomes more popular. The author, Wenlong Liu, is working on this topic right now, and going to update his latest research in this blog. Further Content will include the methods to quantify the hysteresis patterns and to identify the drivers based on various approaches.&lt;/p&gt;
+&lt;p&gt;Hope this blog helps. Cheers!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
+&lt;h2&gt;References:&lt;/h2&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-blaen2017high&#34;&gt;
+&lt;p&gt;Blaen, Phillip J, Kieran Khamis, Charlotte Lloyd, Sophie Comer-Warner, Francesco Ciocca, Rick M Thomas, A Rob MacKenzie, and Stefan Krause. 2017. “High-Frequency Monitoring of Catchment Nutrient Exports Reveals Highly Variable Storm Event Responses and Dynamic Source Zone Activation.” &lt;em&gt;Journal of Geophysical Research: Biogeosciences&lt;/em&gt; 122 (9). Wiley Online Library: 2265–81.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-long2017patterns&#34;&gt;
+&lt;p&gt;Long, David T, Thomas C Voice, Irene Xagaroraki, Ao Chen, Huiyun Wu, Eunsang Lee, Amira Oun, and Fangli Xing. 2017. “Patterns of Cq Hysteresis Loops and Within an Integrative Pollutograph for Selected Inorganic and Organic Solutes and E. Coli in an Urban Salted Watershed During Winter-Early Spring Periods.” &lt;em&gt;Applied Geochemistry&lt;/em&gt; 83. Elsevier: 93–107.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>High frequency measurements in a drained agricultural field</title>
+      <link>/project/high-frequency-measurements/</link>
+      <pubDate>Thu, 08 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/project/high-frequency-measurements/</guid>
+      <description>&lt;p&gt;We installed self-designed high frequency sampling equipment to measure water quality from subsurface drainage in a drained agricultural field.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hellow world!</title>
       <link>/post/brand-new-personal-website-of-wenlong-liu-powered-by-hugo-academic-and-blogdown/</link>
       <pubDate>Thu, 25 Jan 2018 00:00:00 +0000</pubDate>
       
@@ -27,21 +88,24 @@
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>/project/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Nitrate concentration-drainage flow (C-Q) relationship for a drained agricultural field in Eastern North Carolina Plain</title>
+      <link>/talk/2018-01-31-wenlong-liu-agu-2017/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 -0500</pubDate>
       
-      <guid>/project/deep-learning/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+      <guid>/talk/2018-01-31-wenlong-liu-agu-2017/</guid>
+      <description>&lt;p&gt;Preferred citation:&lt;/p&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Liu, W&lt;/strong&gt;, M Youssef, F Birgand, GM Chescheir, B Maxwell, S Tian. “Nitrate concentration-drainage flow (C-Q) relationship for a drained agricultural field in Eastern North Carolina Plain” AGU fall meeting, New Orleans, December 11-15, 2017&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Evaluating Retention Capacity of Infiltration Rain Gardens and Their Potential Effect on Urban Stormwater Management in the Sub-Humid Loess Region of China</title>
+      <link>/publication/wrm_shuangcheng_tang_2016/</link>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/wrm_shuangcheng_tang_2016/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -54,13 +118,12 @@
     </item>
     
     <item>
-      <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>/publication/person-re-identification/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <title>Experimental study on geotextile envelope for subsurface drainage in Yellow River Delta</title>
+      <link>/publication/tcsae_wenlong_liu_2013/</link>
+      <pubDate>Thu, 08 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>/publication/person-re-identification/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <guid>/publication/tcsae_wenlong_liu_2013/</guid>
+      <description></description>
     </item>
     
   </channel>

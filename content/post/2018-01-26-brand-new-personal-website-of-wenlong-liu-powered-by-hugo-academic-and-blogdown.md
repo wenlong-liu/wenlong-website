@@ -1,5 +1,5 @@
 ---
-title: Brand new personal website of Wenlong Liu powered by Hugo-academic and Blogdown
+title: Hellow world!
 author: Wenlong Liu
 date: '2018-01-25'
 slug: brand-new-personal-website-of-wenlong-liu-powered-by-hugo-academic-and-blogdown
@@ -9,7 +9,7 @@ tags:
   - R
 header:
   caption: ''
-  image: 'headwater.jpeg'
+  image: ''
 ---
 
 Since Jan. 2018, my brand new website is published online.  The website is powered by [Blogdown](https://bookdown.org/yihui/blogdown/) and [Hugo-academic](https://themes.gohugo.io/academic/), and deployed by [Github Pages](https://pages.github.com/).  All the codes are open to public and available at [my github repository](https://github.com/wenlong-liu/wenlong-website).  

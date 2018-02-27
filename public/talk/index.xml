@@ -6,11 +6,21 @@
     <description>Recent content in Recent &amp; Upcoming Talks on Wenlong Liu&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
+    <copyright>&amp;copy; 2018 Wenlong Liu</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nitrate concentration-drainage flow (C-Q) relationship for a drained agricultural field in Eastern North Carolina Plain</title>
+      <link>/talk/2018-01-31-wenlong-liu-agu-2017/</link>
+      <pubDate>Sun, 10 Dec 2017 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/2018-01-31-wenlong-liu-agu-2017/</guid>
+      <description>Preferred citation:
+Liu, W, M Youssef, F Birgand, GM Chescheir, B Maxwell, S Tian. “Nitrate concentration-drainage flow (C-Q) relationship for a drained agricultural field in Eastern North Carolina Plain” AGU fall meeting, New Orleans, December 11-15, 2017</description>
+    </item>
     
   </channel>
 </rss>

@@ -251,7 +251,7 @@ defaultContentLanguageInSubdir = false
 [[menu.main]]
   name = "Publications"
   url = "#publications"
-  weight = 2
+  weight = 3
   
 [[menu.main]]
   name = "Presentations"
@@ -261,12 +261,12 @@ defaultContentLanguageInSubdir = false
 [[menu.main]]
   name = "Blogs"
   url = "#posts"
-  weight = 5
+  weight = 2
 
 [[menu.main]]
   name = "Projects"
   url = "#projects"
-  weight = 3
+  weight = 5
 
 [[menu.main]]
   name = "Photos"
