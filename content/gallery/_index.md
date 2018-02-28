@@ -18,7 +18,18 @@ caption = "Installing multi-point sampler in the field in 2017"
 [[gallery_item]]
 album = "1"
 image = "cattles_in_pasture.JPG"
-caption = "Surprised cattles at pasture in 2017"
+caption = "Surprised cattles at pasture in 2014"
+
+[[gallery_item]]
+album = "1"
+image = "SoilLayers.JPG"
+caption = "Layered soil in Eastern North Carolina Plain"
+
+[[gallery_item]]
+album = "1"
+image = "tileDrainageInNC.JPG"
+caption = "Tile drainage system in Eastern North Carolina Plain"
+
 +++
 Following are interesting pictures from Wenlong Liu's research. 
 {{< gallery album="1" >}}

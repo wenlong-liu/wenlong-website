@@ -33,5 +33,5 @@ vignettes/*.pdf
 *.knit.md
 
 # Build website.
-public
+public/
 .Rproj.user

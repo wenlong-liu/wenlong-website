@@ -1,22 +1,22 @@
 +++
 # Date this page was created.
-date = "2016-04-27"
+date = "2018-02-27"
 
 # Project title.
-title = "External Project"
+title = "Soil blogs in zhihu.com (in Chinese)"
 
 # Project summary to display on homepage.
-summary = "An example of linking directly to an external project website using `external_link`."
+summary = "Wenlong Liu also wrote, and is still writing, blogs (in Chinsese) in zhihu.com to share his research output to audience from different backgrounds.  "
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "boards.jpg"
+image_preview = "ilovesoil.jpg"
 
 # Tags: can be used for filtering projects.
-# Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["demo"]
+# Example: `tags = ["outreach"]`
+tags = ["outreach","other"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "http://example.org"
+external_link = "https://zhuanlan.zhihu.com/ilovesoil"
 
 # Does the project detail page use math formatting?
 math = false
