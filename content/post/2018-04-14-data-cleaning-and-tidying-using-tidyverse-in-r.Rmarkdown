@@ -1,0 +1,13 @@
+---
+title: Data cleaning and tidying using Tidyverse in R
+author: Wenlong Liu
+date: '2018-04-14'
+slug: data-cleaning-and-tidying-using-tidyverse-in-r
+categories:
+  - Data analysis
+tags:
+  - R
+  - Tidyverse
+---
+
+Data cleaning is a critical procedure, and sometimes very time-consuming step, during the whole data analysis workflow.  With the help of 

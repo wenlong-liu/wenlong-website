@@ -30,4 +30,14 @@ caption = ""
 weight = 1
 +++
 
-We installed self-designed high frequency sampling equipment to measure water quality from subsurface drainage in a drained agricultural field. 
+In order to further investigate the water movement and nutrient transport from agricultural fields, we developed equipment and algorithm to zoom in the hydrograph and chemograph both spatially and temporally. 
+We installed self-designed high frequency sampling equipment to measure water quality from subsurface tile drainage outlet and from shallow groundwater.  
+
+In the drain outlet, we depolyed V-notch weir and pressure transducers to measure drainage flow, and optical spetrophometer to continuously monitor nitrate concentration. The layout is shwon in Fig. 1. 
+
+[![]("fieldpicture.jpg")]
+
+In shallow groundwater, we installed 10 precise water quality wells in different locations in shallow groundwater.  The multi-point sampler is used to collect __fresh__ water samples from wells every 6 minutes. In other words, we took measurements in each well every hour.  The picture of measuring device is shown in Fig. 2
+[![]("mps.jpg")]
+
+Further analysis of high frequency measurements were still undergoing as of April 2018.  
