@@ -18,6 +18,11 @@ weight = 5
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
+  course = "Ph.D. candidate in Agricultural Engineering"
+  institution = "North Carolina State University, U.S."
+  year = 2018
+
+[[education.courses]]
   course = "M.S. in Hydrology and Water Resources"
   institution = "Xi'an University of Technology, China"
   year = 2013

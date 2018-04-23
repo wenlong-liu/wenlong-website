@@ -16,7 +16,7 @@ selected = false
 # Projects (optional).
 #   Associate this talk with one or more of your projects.
 #   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
-projects = [""]
+projects = ['high_frequency_measurements']
 
 # Links (optional).
 url_pdf = "files/Liu_2017_AGU_Poster.pdf"

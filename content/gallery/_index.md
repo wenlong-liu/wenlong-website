@@ -30,6 +30,28 @@ album = "1"
 image = "tileDrainageInNC.JPG"
 caption = "Tile drainage system in Eastern North Carolina Plain"
 
+
+
+[[gallery_item]]
+album = "1"
+image = "NCERA_217_2.JPG"
+caption = "Wenlong was introducing his poster to audience(s)."
+
+[[gallery_item]]
+album = "1"
+image = "NCERA_217_1.jpeg"
+caption = "Wenlong was introducing his poster to audience(s)."
+
+[[gallery_item]]
+album = "1"
+image = "wenlong_Johnson Fellowship.jpg"
+caption = "Wenlong received 2018 William H. and Glenda N. Jonson Graduate Engineering Fellowship Stipend Endowment"
+
+[[gallery_item]]
+album = "1"
+image = "drainageDitchinNC.JPG"
+caption = "A open ditch drainage system installed in Eastern North Carolina"
+
 +++
 Following are interesting pictures from Wenlong Liu's research. 
 {{< gallery album="1" >}}
