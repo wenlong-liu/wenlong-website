@@ -33,15 +33,24 @@ weight = 1
 In order to further investigate the water movement and nutrient transport from agricultural fields, we developed equipment and algorithm to zoom in the hydrograph and chemograph both spatially and temporally. 
 We installed self-designed high frequency sampling equipment to measure water quality from subsurface tile drainage outlet and from shallow groundwater.  
 
-In the drain outlet, we depolyed V-notch weir and pressure transducers to measure drainage flow, and optical spetrophometer to continuously monitor nitrate concentration. The layout is shwon in Fig. 1. 
+At the drainage tile outlet, we installed V-notch weir and pressure transducers to measure drainage flow, and an optical spetrophometer to continuously monitor nitrate concentration. 
 
-![Fig. 1](/img/gallery/Multi_point_sampler.jpg)
-Fig. 1 A photo showing Wenlong Liu was working on the installation.
-
-In shallow groundwater, we installed 10 precise water quality wells in different locations in shallow groundwater.  The multi-point sampler is used to collect __fresh__ water samples from wells every 6 minutes. In other words, we took measurements in each well every hour.  The picture of measuring device is shown in Fig. 2
+In shallow groundwater, we digged 10  water quality wells at different locations in shallow groundwater.  The multi-point sampler collected __fresh__ water samples from wells every 6 minutes. In other words, we took water quality measurements in each well every hour.  The following picture shows the running deviced deployed in early spring, 2018.
 
 ![](/img/mps.jpg)
 
-Fig. 2 A photo showing a running multi-point sampler (MPS)
+Fig. 1 A photo showing a running multi-point sampler and accessories. (MPS)
 
-Further analysis of high frequency measurements were still undergoing as of April 2018.  
+Further analysis of high frequency measurements is still undergoing to achieve the following objectives:
+
+* What is the temporal dynamics of drainage discharge and nitrate concentration inferred from high frequency measurements?
+
+* Can we interprete the relationship between nutrient concentration and discharge in tile drainage using high frequency measurements?
+
+* How to describe and predict the transport and fate of nitrate in and from agricultural fields?
+
+
+(Updated on April 25, 2018)
+
+---
+
