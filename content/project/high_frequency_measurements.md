@@ -27,19 +27,18 @@ image = "fieldpicture.jpg"
 caption = ""
 
 # the order of each projects.
-weight = 1
+weight = 10
+
 +++
 
-In order to further investigate the water movement and nutrient transport from agricultural fields, we developed equipment and algorithm to zoom in the hydrograph and chemograph both spatially and temporally. 
+In order to further investigate the water movement and nutrient transport from agricultural fields, we developed equipment and algorithms to zoom in the hydrograph and chemograph both spatially and temporally. 
 We installed self-designed high frequency sampling equipment to measure water quality from subsurface tile drainage outlet and from shallow groundwater.  
 
 At the drainage tile outlet, we installed V-notch weir and pressure transducers to measure drainage flow, and an optical spetrophometer to continuously monitor nitrate concentration. 
 
-In shallow groundwater, we digged 10  water quality wells at different locations in shallow groundwater.  The multi-point sampler collected __fresh__ water samples from wells every 6 minutes. In other words, we took water quality measurements in each well every hour.  The following picture shows the running deviced deployed in early spring, 2018.
+In shallow groundwater, we digged 10  water quality wells at different locations in shallow groundwater.  The multi-point sampler collected __fresh__ water samples from wells every 6 minutes. In other words, we took water quality measurements in each well every hour.  The following picture shows the running device deployed in early spring, 2018.
 
-![](/img/mps.jpg)
-
-Fig. 1 A photo showing a running multi-point sampler and accessories. (MPS)
+![A photo showing a running multi-point sampler and accessories. (MPS)](/img/mps.jpg)
 
 Further analysis of high frequency measurements is still undergoing to achieve the following objectives:
 
@@ -50,7 +49,7 @@ Further analysis of high frequency measurements is still undergoing to achieve t
 * How to describe and predict the transport and fate of nitrate in and from agricultural fields?
 
 
-(Updated on April 25, 2018)
+(Updated on May 8th, 2018)
 
 ---
 

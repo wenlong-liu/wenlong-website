@@ -35,6 +35,6 @@ weight = 5
 
 # Biography
 
-Wenlong Liu is a Ph.D. candidate majoring in agricultural engineering. His research focuses on hydrology and water contamination from agricultural activities both in field and watershed scales.  Wenlong conducts field experiments and data mining in high frequency measurements and seeks to obtain a better understanding of hydrological and biogeochemical processes in plant-soil-water systems. 
+Wenlong Liu is a Ph.D. candidate majoring in agricultural engineering. His research focuses on hydrology and water contamination from agricultural activities both in field and watershed scales.  Wenlong conducts field experiments and data mining in high frequency measurements, to obtain a better understanding of hydrological and biogeochemical processes in plant-soil-water systems. 
 
-In addition, Wenlong believes reproducible research output is critical for rapidly updating research processes.  Therefore, Wenlong employs programming languages, such as Python and R, to generate research output coupled with data, visualization and results. 
+In addition, Wenlong believes reproducible research output is critical for rapidly updating research processes.  Therefore, Wenlong employs programming languages, including Python and R, to generate research output coupled with data, visualization and results. 

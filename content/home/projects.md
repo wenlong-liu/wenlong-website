@@ -37,8 +37,13 @@ filter_default = 0
   tag = ".high-frequency-measurements"
 
 [[filter]]
+  name = "R packages"
+  tag = ".r-packages"
+  
+[[filter]]
   name = "Other"
-  tag = ".demo"
+  tag = ".other"
+
 
 +++
 

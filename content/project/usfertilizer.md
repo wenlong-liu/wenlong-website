@@ -3,25 +3,25 @@
 date = "2018-02-27"
 
 # Project title.
-title = "Soil blogs in zhihu.com (in Chinese)"
+title = "usfertilizer"
 
 # Project summary to display on homepage.
-summary = "Wenlong Liu also wrote, and is still writing, blogs (in Chinsese) in zhihu.com to share his research output to audience from different backgrounds.  "
+summary = "An R package to summarize the estimated county level data from USGS of USA and provided a clean version using Tidyverse."
 
 # Optional image to display on homepage (relative to `static/img/` folder).
-image_preview = "ilovesoil.jpg"
+image_preview = "usfertilizer.png"
 
 # Tags: can be used for filtering projects.
 # Example: `tags = ["outreach"]`
-tags = ["outreach","other"]
+tags = ["r-packages","R"]
 
 # Optional external URL for project (replaces project detail page).
-external_link = "https://zhuanlan.zhihu.com/ilovesoil"
+external_link = "https://wenlong-liu.github.io/usfertilizer/"
 
 # Does the project detail page use math formatting?
 math = false
 
 # the order of each projects.
-weight = 4
+weight = 2
 +++
 
