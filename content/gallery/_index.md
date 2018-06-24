@@ -52,6 +52,11 @@ album = "1"
 image = "drainageDitchinNC.JPG"
 caption = "A open ditch drainage system installed in Eastern North Carolina"
 
+[[gallery_item]]
+album = "1"
+image = "AnimalWaste.jpg"
+caption = "Animal waste application in a Pasture site in North Carolina"
+
 +++
 Following are interesting pictures from Wenlong Liu's research. 
 {{< gallery album="1" >}}
