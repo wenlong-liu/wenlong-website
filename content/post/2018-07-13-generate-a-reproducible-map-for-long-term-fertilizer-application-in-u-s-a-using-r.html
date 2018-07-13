@@ -1,0 +1,163 @@
+---
+title: Generate a reproducible map for county-level fertilizer estimation data in U.S.A.
+  using R
+author: Wenlong Liu
+date: '2018-07-13'
+slug: generate-a-reproducible-map-for-long-term-fertilizer-application-in-u-s-a-using-r
+categories:
+  - Research outreach
+tags:
+  - R
+  - r-packages
+header:
+  caption: ''
+  image: ''
+---
+
+
+
+<div id="introduction-and-motivation" class="section level2">
+<h2>Introduction and motivation</h2>
+<p>Nutrients from synthetic fertilizer and manure are the dominating input source in many agricultural watersheds. Such nutrients, when exported into surface water bodies, have been identified as a primary cause of severe eutrophication in surface water bodies, such as Great Lakes and the Gulf of Mexico. To address the effects of agricultural activities on surface water bodies, researchers and environmental engineers are very interested to quantify the nutrient input from fertilizer. However, the quantification of nutrient input is very difficult due to the high complexity of fertilizer application in both <em>time</em> and <em>space</em>. To at least obtain an estimation of fertilizer nutrient input researchers in United States Geographic Services (USGS) provided an estimation of nutrient application at a count level throughout contiguous U.S. The estimation dataset was based on sales data of fertilizer and survey results of livestock and animal farms. This series of publication has already drawn great attentions from researchers and engineers, and also help generate many useful insights.</p>
+<p>In early this year (2018), while working on a publication regarding the nutrient dynamics in a highly-managed agricultural watershed, the author also benefited a lot from the fertilizer estimation dataset. However, the whole dataset was published by different authors and at different formats, see <a href="https://wenlong-liu.github.io/usfertilizer/articles/Data_sources_and_cleaning.html">summary of data sources</a>. The author spent a considerable amount of time to compile, clean and summarize the dataset. In addition to the data cleaning, it is also hard to reproduce the same results and make it scalable for a larger area and/or a longer period. Therefore, after confirming the license of the dataset, the author wrapped the cleaned dataset to an R package, <em>usfertilizer</em>, and publish it via <a href="https://cran.r-project.org/web/packages/usfertilizer/index.html">CRAN</a>.</p>
+<p><em>usfertilizer</em> provides a tidy version of <a href="https://wenlong-liu.github.io/usfertilizer/reference/us_fertilizer_county.html">fertilizr estimation data</a>, which is very convenient for users to retrieve and visualize the dataset. However, this <strong>convenience</strong> requires users equipped with an advanced knowledge of data manipulating and visualization. To provide a user-friendly package to retrieve, summarize and visualize the dataset, the author further developed an R package, <em>ggfertilizer</em>, to reduce the obstacles of using the county-level fertilizer data.</p>
+<p>In this post, the author is going to briefly introduce the basics of <em>ggfertilizer</em> and provide a smooth and clear workflow to generate a reproducible fertilizer map. This blog targets users with an entry level of R or related packages. For advanced R users, there is more detailed description available at <a href="https://wenlong-liu.github.io/ggfertilizer/">the package website</a>.</p>
+</div>
+<div id="why-reproducible" class="section level2">
+<h2>Why reproducible?</h2>
+<p>Generally, published research should be able to be reproduced by peers with same prerequisite. However, according to a report from Nature in 2016, <a href="https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970"><em>1,500 scientists lift the lid on reproducibility
+</em></a>:</p>
+<blockquote>
+<p>More than 70% of researchers have tried and failed to reproduce another scientist’s experiments, and more than half have failed to reproduce their own experiments.</p>
+</blockquote>
+<p>This so-called <em>reproducibility crisis</em> has already generated great attentions and concerns from different perspectives, including researchers, funding agencies, stakeholders, and also the public. To increase the credits and values of research output, it is of importance to provide <strong>reproducible research output</strong> coupled with data, results, visualization, and relevant codes.</p>
+</div>
+<div id="how-to-generate-a-reproducible-map" class="section level2">
+<h2>How to generate a reproducible map?</h2>
+<div id="prerequisite" class="section level3">
+<h3>Prerequisite</h3>
+<p>All the materials in this post were generated using <a href="https://www.r-project.org/">R</a>, an open-source software. Users can easily download and install the corresponding R version with your operation system via <a href="https://cloud.r-project.org/">this link</a>.</p>
+<p>There are also some packages required to reproduce this post. If you have not installed them, please run the following codes.</p>
+<pre class="r"><code>install.packages(&quot;ggplot2&quot;)
+install.packages(&quot;usfertilizer&quot;)
+install.packages(&quot;ggsn&quot;)
+
+# check if devtools installed.
+if(!require(devtools, character.only = TRUE)){
+  install.packages(&quot;devtools&quot;)
+}
+
+# install packages from my github repo.
+devtools::install_github(&quot;wenlong-liu/ggfertilizer&quot;)</code></pre>
+<p>After installing all the libraries, we should include them in the R session to run the following codes.</p>
+<pre class="r"><code>require(ggfertilizer)
+require(ggplot2)
+require(ggsn)
+# import pre-packed dataset
+data(&quot;us_fertilizer_county&quot;)</code></pre>
+</div>
+<div id="finalize-parameters" class="section level3">
+<h3>Finalize parameters</h3>
+<p>As mentioned before, the author has already wrapped and released the fertilizer data for contiguous United States at a county level from 1945 to 2012. Additional details of data sources, compilation and coverage are available via <a href="https://wenlong-liu.github.io/usfertilizer/articles/Data_sources_and_cleaning.html">usfertilizer</a>. First let us look at the description of the dataset.</p>
+<pre class="r"><code>str(us_fertilizer_county)</code></pre>
+<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    625580 obs. of  12 variables:
+##  $ FIPS      : chr  &quot;01001&quot; &quot;01003&quot; &quot;01005&quot; &quot;01007&quot; ...
+##  $ State     : chr  &quot;AL&quot; &quot;AL&quot; &quot;AL&quot; &quot;AL&quot; ...
+##  $ County    : chr  &quot;Autauga&quot; &quot;Baldwin&quot; &quot;Barbour&quot; &quot;Bibb&quot; ...
+##  $ ALAND     : num  1.54e+09 4.12e+09 2.29e+09 1.61e+09 1.67e+09 ...
+##  $ AWATER    : num  2.58e+07 1.13e+09 5.09e+07 9.29e+06 1.52e+07 ...
+##  $ INTPTLAT  : num  32.5 30.7 31.9 33 34 ...
+##  $ INTPTLONG : num  -86.6 -87.7 -85.4 -87.1 -86.6 ...
+##  $ Quantity  : num  1580225 6524369 2412372 304592 1825118 ...
+##  $ Year      : chr  &quot;1987&quot; &quot;1987&quot; &quot;1987&quot; &quot;1987&quot; ...
+##  $ Nutrient  : chr  &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; ...
+##  $ Farm.Type : chr  &quot;farm&quot; &quot;farm&quot; &quot;farm&quot; &quot;farm&quot; ...
+##  $ Input.Type: chr  &quot;Fertilizer&quot; &quot;Fertilizer&quot; &quot;Fertilizer&quot; &quot;Fertilizer&quot; ...</code></pre>
+<p>The full dataset contains 625,580 observations (rows) and 12 variables (columns). With the R package <em>ggfertilizer</em>, users only need to specify the parameters of interest, including year, nutrient, types of farms, input sources, etc. For instance, the author finalizes a list of parameter for plotting fertilizer map. We can generate maps in the following sections.</p>
+<pre class="r"><code>Year &lt;-  2001
+Nutrient &lt;- &quot;N&quot;
+Input_Type &lt;- &quot;fertilizer&quot; # nutrient comes from synthetic fertilizer.
+Farm_Type &lt;- &quot;farm&quot; # nutrient applied to farms.</code></pre>
+</div>
+<div id="draw-a-base-map" class="section level3">
+<h3>Draw a base map</h3>
+<p>The <em>ggfertilizer</em> package includes a function <a href="https://wenlong-liu.github.io/ggfertilizer/reference/map_us_fertilizer.html"><em>map_us_fertilizer()</em></a> to draw maps easily. Next step will be feed the finalized parameters into the plotting function.</p>
+<pre class="r"><code># draw the map
+us_plot &lt;- map_us_fertilizer(data = us_fertilizer_county, Year = Year, Nutrient = Nutrient,
+                             Farm_Type = Farm_Type, Input_Type = Input_Type, 
+                             add_north = TRUE) # add_north will be used in further sections.
+us_plot</code></pre>
+<p><img src="/post/2018-07-13-generate-a-reproducible-map-for-long-term-fertilizer-application-in-u-s-a-using-r_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="add-title" class="section level3">
+<h3>Add title</h3>
+<p>The map actually is a ggplot2 object and users can modified most of the components using ggplot2 grammar. For example, we can add a title composted by the input parameters.</p>
+<pre class="r"><code>map_title &lt;- paste(Nutrient,  &quot; from &quot;, Input_Type, &quot; input to &quot;, Farm_Type, &quot; in the year of &quot;,Year,
+                     &quot; \nat a county level&quot;,sep = &quot;&quot;)
+# add the title.
+us_plot &lt;- us_plot +
+      ggtitle(map_title)
+us_plot</code></pre>
+<p><img src="/post/2018-07-13-generate-a-reproducible-map-for-long-term-fertilizer-application-in-u-s-a-using-r_files/figure-html/title-1.png" width="672" /></p>
+</div>
+<div id="add-north-and-scale-bars" class="section level3">
+<h3>Add north and scale bars</h3>
+<p>According to practical guidelines of Geographic Information System (GIS), a map without north symbols and scale bars is not a map. Therefore we can add them to the current map.</p>
+<pre class="r"><code># add north symbol and scale bar.
+us_plot &lt;- us_plot +
+  north(us_plot$states_shape, scale = 0.15, anchor = c(x = -68, y = 50) ) +
+  scalebar(us_plot$states_shape, dist = 500, dd2km = TRUE, model = &#39;WGS84&#39;, st.size = 2)
+
+us_plot</code></pre>
+<p><img src="/post/2018-07-13-generate-a-reproducible-map-for-long-term-fertilizer-application-in-u-s-a-using-r_files/figure-html/north_symbol-1.png" width="672" /></p>
+</div>
+<div id="save-a-map" class="section level3">
+<h3>Save a map</h3>
+<p>After adding all the components, we can save the map for further purposes. The map can be save as different format, such as jpg, pdf, svg or png. In this post, the author will save it as a jpg picture.</p>
+<pre class="r"><code>ggsave(filename = &quot;us_fertilizer_map_2001.jpg&quot;, width = 6, height = 4, units = &quot;in&quot;)</code></pre>
+</div>
+</div>
+<div id="summaries" class="section level2">
+<h2>Summaries</h2>
+<p>In this post, the author briefly showed how to generate a reproducible fertilizer map using R. All the codes and related materials are available via <a href="https://github.com/wenlong-liu/wenlong-website/tree/master/content/post">my Github repo</a>. If you have any questions or comments, please feel free to leave a comment or <a href="https://github.com/wenlong-liu/ggfertilizer/issues">open an issue</a> in Github.</p>
+<p>As <em>ggfertilizer</em> is still under heavy development, the author is still working on testing existing functions and adding more features. In the future, the <em>ggfertilizer</em> will be submitted to CRAN, so that R users are more convenient to work with this package.</p>
+</div>
+<div id="r-session" class="section level2">
+<h2>R session</h2>
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>## R version 3.5.0 (2018-04-23)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS High Sierra 10.13.5
+## 
+## Matrix products: default
+## BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] bindrcpp_0.2.2     maps_3.3.0         ggsn_0.4.0        
+## [4] ggplot2_3.0.0      ggfertilizer_0.0.4 usfertilizer_0.1.5
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_0.12.17      pillar_1.2.3      compiler_3.5.0   
+##  [4] plyr_1.8.4        bindr_0.1.1       viridis_0.5.1    
+##  [7] tools_3.5.0       digest_0.6.15     lattice_0.20-35  
+## [10] viridisLite_0.3.0 evaluate_0.10.1   tibble_1.4.2     
+## [13] gtable_0.2.0      png_0.1-7         pkgconfig_2.0.1  
+## [16] rlang_0.2.1       mapproj_1.2.6     yaml_2.1.19      
+## [19] blogdown_0.6      xfun_0.2          gridExtra_2.3    
+## [22] withr_2.1.2       dplyr_0.7.6       stringr_1.3.1    
+## [25] knitr_1.20        rprojroot_1.3-2   grid_3.5.0       
+## [28] tidyselect_0.2.4  glue_1.2.0        R6_2.2.2         
+## [31] foreign_0.8-70    rmarkdown_1.10    bookdown_0.7     
+## [34] sp_1.3-1          purrr_0.2.5       magrittr_1.5     
+## [37] maptools_0.9-2    backports_1.1.2   scales_0.5.0     
+## [40] htmltools_0.3.6   assertthat_0.2.0  colorspace_1.3-2 
+## [43] labeling_0.3      stringi_1.2.3     lazyeval_0.2.1   
+## [46] munsell_0.5.0</code></pre>
+</div>
