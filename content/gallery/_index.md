@@ -30,8 +30,6 @@ album = "1"
 image = "tileDrainageInNC.JPG"
 caption = "Tile drainage system in Eastern North Carolina Plain"
 
-
-
 [[gallery_item]]
 album = "1"
 image = "NCERA_217_2.JPG"
@@ -57,6 +55,10 @@ album = "1"
 image = "AnimalWaste.jpg"
 caption = "Animal waste application in a Pasture site in North Carolina"
 
+[[gallery_item]]
+album = "1"
+image = "floating_island_in_raleigh.jpg"
+caption = "A floating island at NCSU campus"
 +++
 Following are interesting pictures from Wenlong Liu's research. 
 {{< gallery album="1" >}}
