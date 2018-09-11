@@ -1,0 +1,111 @@
+---
+title: Generate animated tracking maps for hurricanes and typhoons
+author: Wenlong Liu
+date: '2018-09-11'
+slug: generate-animated-tracking-maps-for-hurricanes-and-typhoons
+categories:
+  - Personal
+tags:
+  - R
+  - Reproducible-output
+header:
+  caption: ''
+  image: ''
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = F,
+                      warning = F)
+```
+
+As of now, Sep. 11th, 2018, Hurricane Florence (Category 4) is approaching to eastern coastal areas of United States.  There are many ways to track the path of hurricanes (or typhoons) to conduct further analysis, such as flash flooding, ocean surge and property damages.  In this blog, the author tries to plot the tracking of hurricanes, using both stastic and animated maps, with the help of R and related packages.  Specifically, this blog is a reproducible output.  Codes, data and other materials are available via [my Github rep](https://github.com/wenlong-liu/wenlong-website/blob/master/content/post/2018-09-11-generate-animated-tracking-maps-for-hurricanes-and-typhoons.Rmd).
+
+## Import packages and data
+
+```{r}
+require(gganimate)
+require(tidyverse)
+require(lubridate)
+require(ggmap)
+require(mapdata)
+require(ggmap)
+require(maps)
+require(mapdata)
+
+# import data hosted in my github rep. 
+typhoon_data <- read.csv("https://raw.github.com/wenlong-liu/typhoon_animation/master/Data/typhoon_doksuri.csv")
+```
+
+## Data cleaning
+
+Further data cleaning is needed to reformat the datetime and rename a column. 
+
+```{r}
+tracks <-  typhoon_data %>% 
+  # reforamt date time using lubridate package. 
+  mutate(time = mdy_hm(time)) %>% 
+  # rename columns.
+  rename(long = lng) 
+```
+
+## Drawing the static tracking map
+
+The following graph demonstrated the tracking of Typhoon Doksuri in Asia. Typhoon Doksuri was a strong typhoon that mostly impacted the Philippines and Vietnam during mid-September 2017.  On Sep. 11, 2017, Dokuri landed on Philippines and caused considerable damages.  Afterwards, Dokuri kept moving west towards Vietnam and considered as the "most powerful storm in a decade".   In Vietnam, Doksuri caused the depth of 15 persons with 200 people injured. Additionally, the total damages of Doksuri were estimated about US $792 million ([Source](https://en.wikipedia.org/wiki/Typhoon_Doksuri_(2017))).
+
+```{r}
+tracks_box <- make_bbox(lon = tracks$long, lat = tracks$lat, f = 0.5)
+sq_map <- get_map(location = tracks_box, maptype = "satellite", source = "google", zoom = 5)
+
+p <- ggmap(sq_map) + 
+  geom_point(data = tracks, mapping = aes(x = long, y = lat, color = pressure)) +
+  geom_line(data = tracks, mapping = aes(x = long, y = lat, color = pressure)) +
+  scale_color_continuous(name = "Pressure(hPa)",low = "yellow", high = "red")+
+  labs(title = "Tracking of Typhoon Doksuri happened in 2017",
+       subtitle = paste("Max. Wind Speed:", max(tracks$speed),"m/s, Cat.", 
+                        max(tracks$power),"Typhoon"),
+       x = "Longitude", y = "Latitude", 
+       caption = "Data Source: jswater.jiangsu.gov.cn")+
+  NULL
+p
+```
+
+## Drawing animated tracking map
+
+Based on the previous stastic map, the author also drew an animated trakcing map using *[gganimate](https://github.com/thomasp85/gganimate)*.  In the subtitle of the plot, a real-time clock was added to show the timeline of the tracking path.  In addition, to embed the animation in *rmarkdown* files, the author use specific parameters in *?gganimate::animate* to pick the proper render method.  
+
+```{r}
+ani <- ggmap(sq_map) + 
+  theme(text = element_text(size = 17))+
+  geom_point(data = tracks, mapping = aes(x = long, y = lat, color = pressure)) +
+  geom_line(data = tracks, mapping = aes(x = long, y = lat, color = pressure)) +
+  scale_color_continuous(name = "Pressure(hPa)",low = "yellow", high = "red")+
+  labs(title = "Tracking of Typhoon Doksuri happened in 2017",
+       subtitle = "Time:{frame_time}",
+       x = "Long", y = "Lat", 
+       caption = "Data Source: jswater.jiangsu.gov.cn")+
+   transition_reveal(time,time)+
+  NULL
+# embed the animation in rmarkdown. 
+animate(ani, renderer = ffmpeg_renderer())
+```
+
+## Saving animation into gif files
+
+We can also save the animation into gif files, instead of embedding the animation.  
+
+```{r, eval=FALSE}
+gif_ani = animate(ani)
+anim_save("doksuri_tracking.gif", animation = gif_ani)
+```
+
+## Summaries
+
+R and related packages are able to conveniently draw both static and animated maps for tracking hurricanes or typhoons.  Further analysis, such as real-time tracking of hurricanes, will be conducted in the future.   
+
+## R session
+
+```{r}
+sessionInfo()
+```
+
