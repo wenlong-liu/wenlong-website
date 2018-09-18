@@ -15,8 +15,8 @@ header:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,
-                      message = F,
-                      warning = F)
+                      message = FALSE,
+                      warning = FALSE)
 ```
 
 As of now, Sep. 11th, 2018, Hurricane Florence (Category 4) is approaching to eastern coastal areas of United States.  There are many ways to track the path of hurricanes (or typhoons) to conduct further analysis, such as flash flooding, ocean surge and property damages.  In this blog, the author tries to plot the tracking of hurricanes, using both stastic and animated maps, with the help of R and related packages.  Specifically, this blog is a reproducible output.  Codes, data and other materials are available via [my Github rep](https://github.com/wenlong-liu/wenlong-website/blob/master/content/post/2018-09-11-generate-animated-tracking-maps-for-hurricanes-and-typhoons.Rmd).
@@ -29,9 +29,7 @@ require(tidyverse)
 require(lubridate)
 require(ggmap)
 require(mapdata)
-require(ggmap)
 require(maps)
-require(mapdata)
 
 # import data hosted in my github rep. 
 typhoon_data <- read.csv("https://raw.github.com/wenlong-liu/typhoon_animation/master/Data/typhoon_doksuri.csv")
@@ -78,13 +76,13 @@ Based on the previous stastic map, the author also drew an animated trakcing map
 ani <- ggmap(sq_map) + 
   theme(text = element_text(size = 17))+
   geom_point(data = tracks, mapping = aes(x = long, y = lat, color = pressure)) +
-  geom_line(data = tracks, mapping = aes(x = long, y = lat, color = pressure)) +
+  geom_line(data = tracks, mapping = aes(x = long, y = lat, color = pressure), size = 2) +
   scale_color_continuous(name = "Pressure(hPa)",low = "yellow", high = "red")+
   labs(title = "Tracking of Typhoon Doksuri happened in 2017",
        subtitle = "Time:{frame_time}",
        x = "Long", y = "Lat", 
        caption = "Data Source: jswater.jiangsu.gov.cn")+
-   transition_reveal(time,time)+
+   transition_reveal(1,time)+
   NULL
 # embed the animation in rmarkdown. 
 animate(ani, renderer = ffmpeg_renderer())
