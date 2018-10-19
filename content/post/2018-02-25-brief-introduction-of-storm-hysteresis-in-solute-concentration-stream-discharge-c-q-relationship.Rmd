@@ -38,7 +38,7 @@ As the shapes of hysteresis loops vary because of the different hydrogeochemical
 
 * Slope: to indicate the dilution/leaching of solute during an event compared with the base flow.  
 
-![Fig. 1 Depiction of hysteresis loops ](/img/blog_imgs/cq_plot.jpg)
+![Fig. 1 Depiction of hysteresis loops ](../../static/img/blog_imgs/cq_plot.jpg)
 
 
 ## Why are we interested in hysteresis effects?
@@ -48,7 +48,7 @@ Due to the complexity of hydrogeochemical processes in the watershed,  the water
 For example, @blaen2017high monitored high-frequency stream discharge and nutrients data in a headwater catchment for 8 months and delineated 29 storm events representing 31% of observation period.  Based on the analysis of storm hysteresis patterns, @blaen2017high identified the key drivers and processes of nutrient export, showing in Fig. 2.  Further details are available from an open-source publication [here](http://onlinelibrary.wiley.com/doi/10.1002/2017JG003904/full). 
 
 
-![Fig. 2 Conceptual model highlighting the spatial distribution of NO3-N and DOC across the catchment and key processes that control stream nutrient export under different hydroclimatological conditions. ](/img/blog_imgs/conceptual_hysteresis.png)
+![Fig. 2 Conceptual model highlighting the spatial distribution of NO3-N and DOC across the catchment and key processes that control stream nutrient export under different hydroclimatological conditions. ](../../static/img/blog_imgs/conceptual_hysteresis.png)
 
 With the help of rapidly developing in-situ measuring techniques, we are going to gain more access to intensive measurements from different research interests.  Therefore, the analysis of C-Q relationship with high-frequency dataset becomes more popular.  The author, Wenlong Liu, is working on this topic right now, and going to update his latest research in this blog.  Further Content will include the methods to quantify the hysteresis patterns and to identify the drivers based on various approaches.  
 
