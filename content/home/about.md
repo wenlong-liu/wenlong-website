@@ -18,9 +18,9 @@ weight = 5
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "Ph.D. candidate in Agricultural Engineering"
+  course = "Ph.D. in Agricultural Engineering"
   institution = "North Carolina State University, U.S."
-  year = 2018
+  year = 2019
 
 [[education.courses]]
   course = "M.S. in Hydrology and Water Resources"
@@ -35,6 +35,6 @@ weight = 5
 
 # Biography
 
-Wenlong Liu is a Ph.D. candidate majoring in agricultural engineering. His research focuses on hydrology and water contamination from agricultural activities both in field and watershed scales.  Wenlong conducts field experiments and data mining in high frequency measurements, to obtain a better understanding of hydrological and biogeochemical processes in plant-soil-water systems. 
+Wenlong Liu obtained his Ph.D. in Jan. 2019 majoring in Agricultural Engineering. His research focuses on hydrology and water contamination from agricultural activities both in field and watershed scales.  Wenlong conducts field experiments and data mining in high-frequency measurements, to obtain a better understanding of hydrological and biogeochemical processes in plant-soil-water systems. 
 
 In addition, Wenlong believes reproducible research output is critical for rapidly updating research processes.  Therefore, Wenlong employs programming languages, including Python and R, to generate research output coupled with data, visualization and results. 

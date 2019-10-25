@@ -10,7 +10,7 @@ title = "Wenlong Liu's website"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2018 Wenlong Liu"
+copyright = "&copy; 2019 Wenlong Liu"
 
 theme = "hugo-academic"
 enableEmoji = true
@@ -51,18 +51,18 @@ defaultContentLanguageInSubdir = false
 
   # Your details.
   name = "Wenlong Liu"
-  role = "Ph.D. candidate in Agricultural Engineering"
+  role = "Ph.D. in Agricultural Engineering"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "North Carolina State University", url = "https://www.bae.ncsu.edu/" } ]
+  organizations = [ { name = "ORISE Postdoc working at US EPA RTP campus", url = "https://www.epa.gov/aboutepa/about-epas-campus-research-triangle-park-rtp-north-carolina" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "wliu14@ncsu.edu"
-  address = "Room 182 Weaver Labs, North Carolina State University, Raleigh, NC"
-  office_hours = ""
-  phone = ""
+  email = "liu.wenlong@epa.gov"
+  address = "109 TW Alexander Dr, Durham, NC 27709"
+  office_hours = "8:30-5:30 M-F"
+  phone = "919-541-5305"
   skype = ""
   telegram = ""
 
@@ -94,8 +94,8 @@ defaultContentLanguageInSubdir = false
   #   3: OpenStreetMap (Mapbox)
   map = 1
   map_api_key = "AIzaSyC3hnnxowDNcEmvZ3bVxBMR_akhIqWxm48"
-  latitude = "35.783754"
-  longitude = "-78.679523"
+  latitude = "35.879839"
+  longitude = "-78.872773"
   zoom = 15
 
   # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
@@ -229,16 +229,25 @@ defaultContentLanguageInSubdir = false
     icon_pack = "ai"
     link = "https://www.researchgate.net/profile/Wenlong_Liu5"
 
-[[params.social]]
+  [[params.social]]
     icon = "google-scholar"
     icon_pack = "ai"
     link = "https://scholar.google.com/citations?user=5_uL0OYAAAAJ&hl=en"
     
   [[params.social]]
+    icon = "orcid"
+    icon_pack = "ai"
+    link = "https://orcid.org/0000-0002-2271-3541"   
+    
+  [[params.social]]
+    icon = "publons"
+    icon_pack = "ai"
+    link = "https://publons.com/researcher/3033508/wenlong-liu/"     
+    
+  [[params.social]]
     icon = "github"
     icon_pack = "fa"
     link = "//github.com/wenlong-liu"
-
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -277,7 +286,12 @@ defaultContentLanguageInSubdir = false
   name = "Photos"
   url = "gallery"
   weight = 6
-
+  
+[[menu.main]]
+  name = "CV"
+  url = "files/cv_wenlong_liu_oct_2019.pdf"
+  weight = 6.5
+  
 [[menu.main]]
   name = "Contact"
   url = "#contact"
